@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<config>
+    <RutaCerts>C:\test\certificados</RutaCerts>
+    <cacert>C:\test\pki\cacert.pem</cacert>
+    <cakey>C:\test\pki\cakey.pem</cakey>
+    <client_priv>C:\test\pki\client_priv.pem</client_priv>
+    <ConfigFile>C:\test\pki\config.conf</ConfigFile>
+    <pwd>a,Fn%oEOZF</pwd>
+    <openssl_path>C:\OpenSSL-Win32\bin\openssl.exe</openssl_path>
+    <access2003_path>C:\CertificateGenerator\bin\bd1.mdb</access2003_path>
+        <Usuario_LDAP>root</Usuario_LDAP>
+        <Pass_LDAP>adminpw</Pass_LDAP>
+        <Dominio>IGLOVAL</Dominio>
+        <Direccion_LDAP>192.168.56.1</Direccion_LDAP>        
+</config>

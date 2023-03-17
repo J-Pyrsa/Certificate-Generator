@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9B9E15E4-F2B3-4F9A-A2F1-5754DDC480A2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CertificateGenerator.My.MyApplication</StartupObject>
+    <RootNamespace>CertificateGenerator</RootNamespace>
+    <AssemblyName>Certificate Generator</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost:8090/Certificate Generator/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.8.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\..\..\..\..\..\CertificateGenerator\Debug\bin\</OutputPath>
+    <DocumentationFile>Certificate Generator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\CertificateGenerator\release\</OutputPath>
+    <DocumentationFile>Certificate Generator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SecurityManager.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F4433F5BFD8934B1031981A5F7AAB25D5BF22B6C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\checks.vb" />
+    <Compile Include="Formularios\Ayuda\AboutBox1.Designer.vb">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ayuda\AboutBox1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Clases\DB.vb" />
+    <Compile Include="Clases\HLSecure.vb" />
+    <Compile Include="Formularios\Configuración\ConfigFrm.Designer.vb">
+      <DependentUpon>ConfigFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Configuración\ConfigFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\LogsFrm.Designer.vb">
+      <DependentUpon>LogsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\LogsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\ValidacionFrm.Designer.vb">
+      <DependentUpon>ValidacionFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Herramientas\ValidacionFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\Graficas\Gragfica01.Designer.vb">
+      <DependentUpon>Gragfica01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\Graficas\Gragfica01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\LDAPlst_frm.Designer.vb">
+      <DependentUpon>LDAPlst_frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\LDAPlst_frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\ListadoLDAP.Designer.vb">
+      <DependentUpon>ListadoLDAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\ListadoLDAP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\UserDetail.Designer.vb">
+      <DependentUpon>UserDetail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\UserDetail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\pruebas\PrincipalTst.Designer.vb">
+      <DependentUpon>PrincipalTst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\pruebas\PrincipalTst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\pruebas\Prueba_ListView01.Designer.vb">
+      <DependentUpon>Prueba_ListView01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\pruebas\Prueba_ListView01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.vb">
+      <DependentUpon>MainFrm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ayuda\history.Designer.vb">
+      <DependentUpon>history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ayuda\history.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Listados\ListadoCertificados.Designer.vb">
+      <DependentUpon>ListadoCertificados.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Listados\ListadoCertificados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\Ayuda\AboutBox1.resx">
+      <DependentUpon>AboutBox1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Configuración\ConfigFrm.resx">
+      <DependentUpon>ConfigFrm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Herramientas\LogsFrm.resx">
+      <DependentUpon>LogsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Herramientas\ValidacionFrm.resx">
+      <DependentUpon>ValidacionFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\Graficas\Gragfica01.resx">
+      <DependentUpon>Gragfica01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\LDAPlst_frm.resx">
+      <DependentUpon>LDAPlst_frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\ListadoLDAP.resx">
+      <DependentUpon>ListadoLDAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\UserDetail.resx">
+      <DependentUpon>UserDetail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\pruebas\PrincipalTst.resx">
+      <DependentUpon>PrincipalTst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\pruebas\Prueba_ListView01.resx">
+      <DependentUpon>Prueba_ListView01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ayuda\history.resx">
+      <DependentUpon>history.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Listados\ListadoCertificados.resx">
+      <DependentUpon>ListadoCertificados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Formularios\Ayuda\history.rtf" />
+    <None Include="Certificate Generator_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\_ConfigFile\hobtools.vbproj">
+      <Project>{8B9FEF75-FB31-4CE9-BB78-D0E34EBD799E}</Project>
+      <Name>hobtools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Formularios\Configuración\config.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\BIG_FTPBICON.png" />
+    <None Include="Resources\TB_SMALL_URL.png" />
+    <None Include="Resources\BeanButton.gif" />
+    <None Include="Resources\BeanLabel.gif" />
+    <None Include="Resources\BeanTextField.gif" />
+    <None Include="Resources\BIG_COLORS.png" />
+    <None Include="Resources\BIG_CONNECTION.png" />
+    <None Include="Resources\BIG_CONNECTIONPOOL.png" />
+    <None Include="Resources\BIG_CONNINCOMPAT.png" />
+    <None Include="Resources\BIG_CONVTABLES.png" />
+    <None Include="Resources\BIG_DEVICES.png" />
+    <None Include="Resources\BIG_DISPLAYICON.png" />
+    <None Include="Resources\BIG_DRVMAP.png" />
+    <None Include="Resources\BIG_FILETRANSFER.png" />
+    <None Include="Resources\BIG_HLLAPI.png" />
+    <None Include="Resources\BIG_HOSTPRINTER.png" />
+    <None Include="Resources\BIG_HOTSPOTS.png" />
+    <None Include="Resources\BIG_JWTICON.png" />
+    <None Include="Resources\BIG_KEYBOARD.png" />
+    <None Include="Resources\BIG_KEYPAD.png" />
+    <None Include="Resources\BIG_LOGON.png" />
+    <None Include="Resources\BIG_MACRO.png" />
+    <None Include="Resources\BIG_MENU.png" />
+    <None Include="Resources\BIG_MOUSE.png" />
+    <None Include="Resources\BIG_OTHERS.png" />
+    <None Include="Resources\BIG_PRINTERICON.png" />
+    <None Include="Resources\BIG_PRTRED.png" />
+    <None Include="Resources\BIG_SCHEME.png" />
+    <None Include="Resources\BIG_SESSGROUP.png" />
+    <None Include="Resources\BIG_SESSION.png" />
+    <None Include="Resources\BIG_TOOLBAR.png" />
+    <None Include="Resources\DISPLAYSEL.png" />
+    <None Include="Resources\file.png" />
+    <None Include="Resources\ftlist.png" />
+    <None Include="Resources\ftrecv.png" />
+    <None Include="Resources\ftsend.png" />
+    <None Include="Resources\JTERM_32.png" />
+    <None Include="Resources\JWTIcon.png" />
+    <None Include="Resources\LOGO.png" />
+    <None Include="Resources\md_error.png" />
+    <None Include="Resources\md_info.png" />
+    <None Include="Resources\md_quest.png" />
+    <None Include="Resources\md_warn.png" />
+    <None Include="Resources\newdir.png" />
+    <None Include="Resources\prevfold.png" />
+    <None Include="Resources\SMALL_COLOR.png" />
+    <None Include="Resources\SMALL_CONNECTIONPOOL.png" />
+    <None Include="Resources\SMALL_CONNECTIONS.png" />
+    <None Include="Resources\SMALL_CONVTABLES.png" />
+    <None Include="Resources\SMALL_DEVICES.png" />
+    <None Include="Resources\SMALL_DIR.png" />
+    <None Include="Resources\SMALL_DISPLAYDISABLED.png" />
+    <None Include="Resources\SMALL_DISPLAYICON.png" />
+    <None Include="Resources\SMALL_DRVMAP.png" />
+    <None Include="Resources\SMALL_FILETRANSFER.png" />
+    <None Include="Resources\SMALL_FILETRANSFERICON.png" />
+    <None Include="Resources\SMALL_FILETRANSFERICONDISABLED.png" />
+    <None Include="Resources\SMALL_HLLAPI.png" />
+    <None Include="Resources\SMALL_HOSTPRIN.png" />
+    <None Include="Resources\SMALL_HOTSPOT.png" />
+    <None Include="Resources\SMALL_JWTDISABLED.png" />
+    <None Include="Resources\SMALL_JWTICON.png" />
+    <None Include="Resources\SMALL_KEYBOARD.png" />
+    <None Include="Resources\SMALL_KEYPAD.png" />
+    <None Include="Resources\SMALL_LOGON.png" />
+    <None Include="Resources\SMALL_MACRO.png" />
+    <None Include="Resources\SMALL_MEMBER.png" />
+    <None Include="Resources\SMALL_MENU.png" />
+    <None Include="Resources\SMALL_MOUSE.png" />
+    <None Include="Resources\SMALL_MYCOMP.png" />
+    <None Include="Resources\SMALL_OTHERS.png" />
+    <None Include="Resources\SMALL_PRINTERDISABLED.png" />
+    <None Include="Resources\SMALL_PRINTERICON.png" />
+    <None Include="Resources\SMALL_PRTRED.png" />
+    <None Include="Resources\SMALL_SCHEMES.png" />
+    <None Include="Resources\SMALL_SCHOTHER.png" />
+    <None Include="Resources\SMALL_SCHOWN.png" />
+    <None Include="Resources\SMALL_SESSION.png" />
+    <None Include="Resources\SMALL_TOOLBAR.png" />
+    <None Include="Resources\TB_BIG_ABOUT.png" />
+    <None Include="Resources\TB_BIG_ADD.png" />
+    <None Include="Resources\TB_BIG_CLEAR.png" />
+    <None Include="Resources\TB_BIG_CLOSE.png" />
+    <None Include="Resources\TB_BIG_CONNECT.png" />
+    <None Include="Resources\TB_BIG_CONNECTED.png" />
+    <None Include="Resources\TB_BIG_COPY.png" />
+    <None Include="Resources\TB_BIG_COPYAPPEND.png" />
+    <None Include="Resources\TB_BIG_CUT.png" />
+    <None Include="Resources\TB_BIG_EXITALL.png" />
+    <None Include="Resources\TB_BIG_FKEY.png" />
+    <None Include="Resources\TB_BIG_HELP.png" />
+    <None Include="Resources\TB_BIG_INFO.png" />
+    <None Include="Resources\TB_BIG_KEYPAD.png" />
+    <None Include="Resources\TB_BIG_KSEQ.png" />
+    <None Include="Resources\TB_BIG_MACRO.png" />
+    <None Include="Resources\TB_BIG_MACROPAUSE.png" />
+    <None Include="Resources\TB_BIG_MACROPLAY.png" />
+    <None Include="Resources\TB_BIG_MACRORECORD.png" />
+    <None Include="Resources\TB_BIG_MACROSTOP.png" />
+    <None Include="Resources\TB_BIG_OPEN.png" />
+    <None Include="Resources\TB_BIG_OPTIONS.png" />
+    <None Include="Resources\TB_BIG_PASTE.png" />
+    <None Include="Resources\TB_BIG_PRINT.png" />
+    <None Include="Resources\TB_BIG_PRINT_FLUSH.png" />
+    <None Include="Resources\TB_BIG_PROJECTNEW.png" />
+    <None Include="Resources\TB_BIG_RECEIVEFROMHOST.png" />
+    <None Include="Resources\TB_BIG_SAVESESSION.png" />
+    <None Include="Resources\TB_BIG_SECURE.png" />
+    <None Include="Resources\TB_BIG_SELECTALL.png" />
+    <None Include="Resources\TB_BIG_SENDTOHOST.png" />
+    <None Include="Resources\TB_BIG_SHOWLAUNCHER.png" />
+    <None Include="Resources\TB_BIG_SWITCHTO.png" />
+    <None Include="Resources\TB_BIG_UNMARK.png" />
+    <None Include="Resources\TB_BIG_URL.png" />
+    <None Include="Resources\TB_SMALL_ABOUT.png" />
+    <None Include="Resources\TB_SMALL_CLEAR.png" />
+    <None Include="Resources\TB_SMALL_CLOSE.png" />
+    <None Include="Resources\TB_SMALL_CONNECT.png" />
+    <None Include="Resources\TB_SMALL_CONNECTED.png" />
+    <None Include="Resources\TB_SMALL_COPY.png" />
+    <None Include="Resources\TB_SMALL_COPYAPPEND.png" />
+    <None Include="Resources\TB_SMALL_CUT.png" />
+    <None Include="Resources\TB_SMALL_EXITALL.png" />
+    <None Include="Resources\TB_SMALL_FKEY.png" />
+    <None Include="Resources\TB_SMALL_HELP.png" />
+    <None Include="Resources\TB_SMALL_INFO.png" />
+    <None Include="Resources\TB_SMALL_KEYPAD.png" />
+    <None Include="Resources\TB_SMALL_KSEQ.png" />
+    <None Include="Resources\TB_SMALL_MACRO.png" />
+    <None Include="Resources\TB_SMALL_MACROPAUSE.png" />
+    <None Include="Resources\TB_SMALL_MACROPLAY.png" />
+    <None Include="Resources\TB_SMALL_MACRORECORD.png" />
+    <None Include="Resources\TB_SMALL_MACROSTOP.png" />
+    <None Include="Resources\TB_SMALL_OPEN.png" />
+    <None Include="Resources\TB_SMALL_OPTIONS.png" />
+    <None Include="Resources\TB_SMALL_PASTE.png" />
+    <None Include="Resources\TB_SMALL_PRINT.png" />
+    <None Include="Resources\TB_SMALL_PRINT_FLUSH.png" />
+    <None Include="Resources\TB_SMALL_RECEIVEFROMHOST.png" />
+    <None Include="Resources\TB_SMALL_SAVESESSION.png" />
+    <None Include="Resources\TB_SMALL_SECURE.png" />
+    <None Include="Resources\TB_SMALL_SELECTALL.png" />
+    <None Include="Resources\TB_SMALL_SENDTOHOST.png" />
+    <None Include="Resources\TB_SMALL_SHOWLAUNCHER.png" />
+    <None Include="Resources\TB_SMALL_SWITCHTO.png" />
+    <None Include="Resources\TB_SMALL_UNMARK.png" />
+    <None Include="Resources\QuickSearch.gif" />
+    <EmbeddedResource Include="r2\accept.png" />
+    <Content Include="r2\add.png" />
+    <Content Include="r2\application.png" />
+    <Content Include="r2\applications.png" />
+    <Content Include="r2\application_add.png" />
+    <Content Include="r2\application_edit.png" />
+    <Content Include="r2\application_lock.png" />
+    <Content Include="r2\application_next.png" />
+    <Content Include="r2\application_remove.png" />
+    <Content Include="r2\application_up.png" />
+    <Content Include="r2\archive.png" />
+    <Content Include="r2\attachment.png" />
+    <Content Include="r2\back.png" />
+    <Content Include="r2\blog_post.png" />
+    <Content Include="r2\blog_post_accept.png" />
+    <Content Include="r2\blog_post_delete.png" />
+    <Content Include="r2\blog_post_edit.png" />
+    <Content Include="r2\calculator.png" />
+    <Content Include="r2\calculator_accept.png" />
+    <Content Include="r2\calculator_add.png" />
+    <Content Include="r2\calculator_remove.png" />
+    <Content Include="r2\calendar_date.png" />
+    <Content Include="r2\calendar_empty.png" />
+    <Content Include="r2\cd.png" />
+    <Content Include="r2\cd_accept.png" />
+    <Content Include="r2\cd_add.png" />
+    <Content Include="r2\cd_down.png" />
+    <Content Include="r2\cd_remove.png" />
+    <Content Include="r2\chart.png" />
+    <Content Include="r2\chart_accept.png" />
+    <Content Include="r2\chart_add.png" />
+    <Content Include="r2\chart_remove.png" />
+    <Content Include="r2\clock.png" />
+    <Content Include="r2\comment.png" />
+    <Content Include="r2\comments.png" />
+    <Content Include="r2\comments_add.png" />
+    <Content Include="r2\comments_remove.png" />
+    <Content Include="r2\comment_add.png" />
+    <EmbeddedResource Include="r2\comment_edit.png" />
+    <Content Include="r2\comment_remove.png" />
+    <Content Include="r2\community_users.png" />
+    <Content Include="r2\computer.png" />
+    <Content Include="r2\computers.png" />
+    <Content Include="r2\computer_accept.png" />
+    <Content Include="r2\computer_remove.png" />
+    <Content Include="r2\database.png" />
+    <Content Include="r2\database_accept.png" />
+    <Content Include="r2\database_add.png" />
+    <Content Include="r2\database_down.png" />
+    <Content Include="r2\database_lock.png" />
+    <Content Include="r2\database_next.png" />
+    <Content Include="r2\database_previous.png" />
+    <Content Include="r2\database_process.png" />
+    <Content Include="r2\database_remove.png" />
+    <Content Include="r2\database_search.png" />
+    <Content Include="r2\database_up.png" />
+    <Content Include="r2\down.png" />
+    <Content Include="r2\eject.png" />
+    <Content Include="r2\fast_forward.png" />
+    <Content Include="r2\favorite.png" />
+    <Content Include="r2\favorite_add.png" />
+    <Content Include="r2\favorite_remove.png" />
+    <Content Include="r2\folder.png" />
+    <Content Include="r2\folder_accept.png" />
+    <Content Include="r2\folder_add.png" />
+    <Content Include="r2\folder_down.png" />
+    <Content Include="r2\folder_edit.png" />
+    <Content Include="r2\folder_full.png" />
+    <Content Include="r2\folder_full_accept.png" />
+    <Content Include="r2\folder_full_add.png" />
+    <Content Include="r2\folder_full_delete.png" />
+    <Content Include="r2\folder_next.png" />
+    <Content Include="r2\folder_previous.png" />
+    <Content Include="r2\folder_process.png" />
+    <Content Include="r2\folder_remove.png" />
+    <Content Include="r2\folder_up.png" />
+    <Content Include="r2\forward_new_mail.png" />
+    <Content Include="r2\help.png" />
+    <Content Include="r2\home.png" />
+    <Content Include="r2\home_next.png" />
+    <Content Include="r2\html_page_accept.png" />
+    <Content Include="r2\html_page_warning.png" />
+    <Content Include="r2\image.png" />
+    <Content Include="r2\image_add.png" />
+    <Content Include="r2\image_edit.png" />
+    <Content Include="r2\image_lock.png" />
+    <Content Include="r2\image_multi.png" />
+    <Content Include="r2\image_next.png" />
+    <Content Include="r2\image_remove.png" />
+    <Content Include="r2\image_up.png" />
+    <Content Include="r2\info.png" />
+    <Content Include="r2\lock.png" />
+    <Content Include="r2\lock_disabled.png" />
+    <Content Include="r2\lock_off.png" />
+    <Content Include="r2\lock_off_disabled .png" />
+    <Content Include="r2\mail.png" />
+    <Content Include="r2\mail_accept.png" />
+    <Content Include="r2\mail_add.png" />
+    <Content Include="r2\mail_edit.png" />
+    <Content Include="r2\mail_next.png" />
+    <Content Include="r2\mail_remove.png" />
+    <Content Include="r2\movie_track.png" />
+    <Content Include="r2\movie_track_add.png" />
+    <Content Include="r2\movie_track_next.png" />
+    <Content Include="r2\movie_track_remove.png" />
+    <Content Include="r2\next.png" />
+    <Content Include="r2\notes_edit.png" />
+    <Content Include="r2\note_accept.png" />
+    <Content Include="r2\note_add.png" />
+    <Content Include="r2\note_edit.png" />
+    <Content Include="r2\note_remove.png" />
+    <Content Include="r2\page.png" />
+    <Content Include="r2\page_accept.png" />
+    <Content Include="r2\page_add.png" />
+    <Content Include="r2\page_down.png" />
+    <Content Include="r2\page_edit.png" />
+    <Content Include="r2\page_next.png" />
+    <Content Include="r2\page_previous.png" />
+    <Content Include="r2\page_process.png" />
+    <Content Include="r2\page_remove.png" />
+    <Content Include="r2\page_search.png" />
+    <Content Include="r2\page_swap.png" />
+    <Content Include="r2\page_up.png" />
+    <Content Include="r2\pause.png" />
+    <Content Include="r2\pdf.png" />
+    <Content Include="r2\play.png" />
+    <Content Include="r2\printer.png" />
+    <Content Include="r2\printer_search.png" />
+    <Content Include="r2\process.png" />
+    <Content Include="r2\process_accept.png" />
+    <Content Include="r2\process_add.png" />
+    <Content Include="r2\process_remove.png" />
+    <Content Include="r2\record.png" />
+    <EmbeddedResource Include="r2\remove.png" />
+    <Content Include="r2\repeat.png" />
+    <Content Include="r2\rewind.png" />
+    <Content Include="r2\rss.png" />
+    <Content Include="r2\rss_add.png" />
+    <Content Include="r2\rss_edit.png" />
+    <Content Include="r2\rss_next.png" />
+    <Content Include="r2\rss_remove.png" />
+    <Content Include="r2\search.png" />
+    <Content Include="r2\search_add.png" />
+    <Content Include="r2\search_remove.png" />
+    <Content Include="r2\she_user.png" />
+    <Content Include="r2\she_users.png" />
+    <Content Include="r2\she_user_accept.png" />
+    <Content Include="r2\she_user_add.png" />
+    <Content Include="r2\she_user_comment.png" />
+    <Content Include="r2\she_user_remove.png" />
+    <Content Include="r2\shopping_cart.png" />
+    <Content Include="r2\shopping_cart_accept.png" />
+    <Content Include="r2\shopping_cart_down.png" />
+    <Content Include="r2\shopping_cart_remove.png" />
+    <Content Include="r2\shopping_cart_up.png" />
+    <Content Include="r2\skip_backward.png" />
+    <Content Include="r2\skip_forward.png" />
+    <Content Include="r2\sound.png" />
+    <Content Include="r2\sound_off.png" />
+    <Content Include="r2\sound_on.png" />
+    <Content Include="r2\stop.png" />
+    <Content Include="r2\up.png" />
+    <Content Include="r2\user.png" />
+    <Content Include="r2\users.png" />
+    <Content Include="r2\user_accept.png" />
+    <Content Include="r2\user_add.png" />
+    <Content Include="r2\user_comment.png" />
+    <Content Include="r2\user_comments.png" />
+    <Content Include="r2\user_has_new_email.png" />
+    <Content Include="r2\user_remove.png" />
+    <Content Include="r2\video_favorite.png" />
+    <EmbeddedResource Include="r2\warning.png" />
+    <Content Include="r2\window.png" />
+    <Content Include="r2\windows.png" />
+    <Content Include="r2\window_add.png" />
+    <Content Include="r2\window_edit.png" />
+    <Content Include="r2\window_lock.png" />
+    <Content Include="r2\window_next.png" />
+    <Content Include="r2\window_remove.png" />
+    <Content Include="r2\window_up.png" />
+    <Content Include="r2\word.png" />
+    <EmbeddedResource Include="accept.jpg" />
+    <EmbeddedResource Include="remove.jpg" />
+    <EmbeddedResource Include="warning.jpg" />
+    <None Include="Resources\webcam.png" />
+    <None Include="Resources\address_book.png" />
+    <None Include="Resources\alarm.png" />
+    <None Include="Resources\attachment.png" />
+    <None Include="Resources\bar_chart.png" />
+    <None Include="Resources\briefcase.png" />
+    <None Include="Resources\brush.png" />
+    <None Include="Resources\calculator.png" />
+    <None Include="Resources\calendar.png" />
+    <None Include="Resources\check_mark.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\cloudy.png" />
+    <None Include="Resources\cloudy_sunny.png" />
+    <None Include="Resources\comment_bubble.png" />
+    <None Include="Resources\danger_sign.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\digital_camera.png" />
+    <None Include="Resources\disc.png" />
+    <None Include="Resources\down_arrow.png" />
+    <None Include="Resources\eject.png" />
+    <None Include="Resources\envelope.png" />
+    <None Include="Resources\envelope_open.png" />
+    <None Include="Resources\exclamanation_mark.png" />
+    <None Include="Resources\fast_forward.png" />
+    <None Include="Resources\flag.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\forbidden_sign.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\ipad.png" />
+    <None Include="Resources\iphone.png" />
+    <None Include="Resources\joystick.png" />
+    <None Include="Resources\left_arrow.png" />
+    <None Include="Resources\lightbulb.png" />
+    <None Include="Resources\magnifier.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\monitor.png" />
+    <None Include="Resources\mouse.png" />
+    <None Include="Resources\movie.png" />
+    <None Include="Resources\news.png" />
+    <None Include="Resources\padlock.png" />
+    <None Include="Resources\padlock_open.png" />
+    <None Include="Resources\page.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\phone.png" />
+    <None Include="Resources\phone_book.png" />
+    <None Include="Resources\phone_ringing.png" />
+    <None Include="Resources\photo.png" />
+    <None Include="Resources\pie_chart.png" />
+    <None Include="Resources\placemark.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\question_mark.png" />
+    <None Include="Resources\rainy.png" />
+    <None Include="Resources\record.png" />
+    <None Include="Resources\recycle_bin.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\resume.png" />
+    <None Include="Resources\rewind.png" />
+    <None Include="Resources\right_arrow.png" />
+    <None Include="Resources\rss.png" />
+    <None Include="Resources\shopping_cart.png" />
+    <None Include="Resources\skip_backward.png" />
+    <None Include="Resources\skip_forward.png" />
+    <None Include="Resources\smart_phone.png" />
+    <None Include="Resources\sound.png" />
+    <None Include="Resources\star.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\sunny.png" />
+    <None Include="Resources\support.png" />
+    <None Include="Resources\tag.png" />
+    <None Include="Resources\tv.png" />
+    <None Include="Resources\umbrella.png" />
+    <None Include="Resources\up_arrow.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\video.png" />
+    <Content Include="SecurityManager.ico" />
+    <Content Include="sshkeygen.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
